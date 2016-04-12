@@ -1,0 +1,1 @@
+mvn test > test_out.txt

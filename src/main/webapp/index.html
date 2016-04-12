@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Petstore</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/bootstrap-3.2.0.min.css" rel="stylesheet">
+  <link href="css/kendo.common-2014.3.1119.min.css" rel="stylesheet">
+  <link href="css/kendo.bootstrap-2014.3.1119.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv-3.7.2.min.js"></script>
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <script src="js/respond-1.4.2.min.js"></script>
+    <script src="js/JavaScript-1.6.min.js"></script>
+    <script src="js/placeholders-3.0.2.min.js"></script>
+  <![endif]-->
+
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/bootstrap-3.2.0.min.js"></script>
+  <script src="js/angular-1.2.21.min.js"></script>
+  <script src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+  <script src="js/kendo.all-2014.3.1119.min.js"></script>
+
+  <script src="js/app/base-page.js"></script>
+  <script src="js/app/base-grid.js"></script>
+  <script src="js/app/pet-service.js"></script>
+  <script src="js/app/petstore.js"></script>
+</head>
+
+<body ng-app="petstore" ng-controller="PageCtrl">
+
+<div class="container pull-left pad-top width-200">
+<ol class="breadcrumb">
+  <li><a href="">Petstore</a></li>
+  <li class="active">Pet List</li>
+</ol>
+</div>
+
+<div class="clearfix"></div>
+
+<script type="text/x-kendo-template" id="toolbarTemplate">
+  <div class="grid-toolbar">
+    &nbsp;
+    <button type="submit" id="addBtn" class="btn btn-primary btn-xs" ng-disabled="getSelectionCount() > 0" ng-click="openAddPetModal()"><span
+        class="glyphicon glyphicon-plus"></span> &nbsp;Add</button>
+    &nbsp;
+    <button type="submit" id="editBtn" class="btn btn-primary btn-xs" ng-disabled="getSelectionCount() == 0" ng-click="openEditPetModal()"><span
+        class="glyphicon glyphicon-edit"></span> &nbsp;View</button>
+    &nbsp;
+    <button type="submit" id="deleteBtn" class="btn btn-primary btn-xs" ng-disabled="getSelectionCount() == 0" ng-click="openDeletePetModal()"><span
+        class="glyphicon glyphicon-remove"></span> &nbsp;Delete</button>
+
+    <div class="pull-right">
+      Selected {{getSelectionCount()}} of {{petGrid.dataSource.total()}}
+      <button type="button" title="Refresh" class="btn btn-default btn-xs grid-refresh" ng-click="refreshPage()"><img src="img/refresh.gif"></button>
+    </div>
+
+  </div>
+</script>
+
+
+<script type="text/x-kendo-template" id="photoUrlsTemplate">
+  # for (var i = 0, len = photoUrls.length; i < len; i++ ) { #
+    # if (photoUrls[i]) { #
+      <div class="ellipsis">#= photoUrls[i] #</div>
+    # } #
+  # } #
+</script>
+
+<script type="text/x-kendo-template" id="tagsTemplate">
+  # for (var i = 0, len = tags.length; i < len; i++ ) { #
+    # if (tags[i].name) { #
+      <div class="ellipsis">#= tags[i].name #</div>
+    # } #
+  # } #
+</script>
+
+
+<div class="container-fluid" ng-controller="GridCtrl">
+  <div ng-cloak role="alert" ng-class="['alert-' + (alert.type || 'warning'), alert.closeable ? 'alert-dismissable' : null]" class="alert" ng-repeat="alert in page.alerts">
+    <button ng-click="closeAlert(alert.time)" class="close" type="button" ng-show="alert.closeable">
+        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+    </button>
+    <div>{{alert.msg}}</div>
+  </div>
+
+  <div ng-cloak ng-show="page.bodyMask" class="k-loading-mask" style="width: 100%; height: 100%; top: 0px; left: 0px; z-index: 5000">
+    <span class="k-loading-text">Loading...</span>
+    <div class="k-loading-image"></div>
+    <div class="k-loading-color"></div>
+  </div>
+
+  <div kendo-grid="petGrid" k-options="mainGridOptions"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+body, body.small, body.medium, body.large {
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.width-200 {
+    width: 200px;
+}
+
+.panel-group, .well, .breadcrumb, .alert {
+    margin-bottom: 10px;
+}
+
+.pad-right {
+    padding-right: 15px;
+}
+
+.pad-top {
+    padding-top: 10px;
+}
+
+.pad-bottom {
+    padding-bottom: 10px;
+}
+
+.pad-top-5 {
+    padding-top: 5px;
+}
+
+.pad-top-3 {
+    padding-top: 3px;
+}
+
+span.spacer {
+    display: inline-block;
+    width: 15px;
+}
+
+.input-100 {
+    width: 100%;
+}
+
+.input-xs {
+    height: 22px;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 1.3;
+    border-radius: 3px;
+}
+
+.grid-refresh {
+    width: 22px;
+    height: 22px;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 5px;
+    background: url(../img/refresh.gif) no-repeat;
+}
+
+.alert {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.search-panel-body .form-horizontal .control-label {
+    padding-top: 3px;
+}
+
+.breadcrumb {
+    border: 1px solid #e3e3e3;
+    font-weight: bold;
+}
+
+.grid-toolbar {
+    line-height: 24px;
+}
+
+.k-grid td, .k-grid-header th.k-header {
+    padding-top: 2px;
+    padding-bottom: 1px;
+}
+
+.k-grid td {
+    white-space: nowrap;
+}
+
+th.k-header a.k-link {
+    font-weight: bold;
+}
+
+.text-red {
+    color: red;
+}
+
+input.ng-invalid-required.highlight, select.ng-invalid-required.highlight {
+    border: 1px solid red;
+}
+
+.grid-header-hidden-menu a {
+    visibility: hidden;
+    display: none;
+}
+
+.k-grid-pager a.k-pager-nav, .k-grid-pager a.k-link.k-pager-last, .k-grid-pager ul.k-pager-numbers a.k-link {
+    border: 0px;
+}
+
+.k-grid-pager a.k-pager-nav, .k-grid-pager a.k-link, .k-grid-pager ul.k-pager-numbers a.k-link {
+    background-color: rgb(245, 245, 245);
+}
+
+.k-grid-pager ul.k-pager-numbers .k-state-selected {
+    border: 0px;
+    color: black;
+    background-color: rgb(245, 245, 245);
+    box-shadow: none;
+}
+
+tr.k-group-footer td {
+    background-color: #E0E0E0;
+}
+
+tr.k-group-footer td.k-group-cell {
+    border-top: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
+}
+
+tr.k-alt {
+    background: #EFEFEF;
+}
+
+tr.bg-selected {
+    background: #BCC6CC !important;
+    color: #000000;
+}	
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.modal .modal-header {
+    background-color: #0079c1;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal .modal-body {
+    font-size: 12px;
+}

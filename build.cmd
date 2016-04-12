@@ -1,0 +1,1 @@
+mvn clean package -DskipTests=true -Dmaven.test.skip=true > build_out.txt

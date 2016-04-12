@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building petstore 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ petstore ---
+[INFO] Deleting C:\dev\_pet-store\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ petstore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\dev\_pet-store\src\main\resources
+[INFO] skip non existing resourceDirectory C:\dev\_pet-store\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ petstore ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to C:\dev\_pet-store\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ petstore ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ petstore ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ petstore ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.5:jar (default-jar) @ petstore ---
+[INFO] Building jar: C:\dev\_pet-store\target\petstore-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.3.0.RELEASE:repackage (default) @ petstore ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 10.638 s
+[INFO] Finished at: 2015-11-27T11:04:51-05:00
+[INFO] Final Memory: 26M/185M
+[INFO] ------------------------------------------------------------------------

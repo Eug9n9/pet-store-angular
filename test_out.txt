@@ -1,0 +1,135 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building petstore 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ petstore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\dev\_pet-store\src\main\resources
+[INFO] skip non existing resourceDirectory C:\dev\_pet-store\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ petstore ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ petstore ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\dev\_pet-store\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ petstore ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ petstore ---
+[INFO] Surefire report directory: C:\dev\_pet-store\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.petstore.controller.PetControllerTests
+11:06:04.655 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+11:06:04.740 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+11:06:04.812 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+11:06:04.815 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+11:06:04.816 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+11:06:04.818 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+11:06:04.819 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+11:06:04.819 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /petList HTTP/1.1
+11:06:04.820 [main] DEBUG org.apache.http.wire -  >> "GET /petList HTTP/1.1[\r][\n]"
+11:06:04.823 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+11:06:04.823 [main] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+11:06:04.823 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+11:06:04.823 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_66)[\r][\n]"
+11:06:04.824 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:06:04.824 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+11:06:04.824 [main] DEBUG org.apache.http.headers - >> GET /petList HTTP/1.1
+11:06:04.824 [main] DEBUG org.apache.http.headers - >> Accept: */*
+11:06:04.824 [main] DEBUG org.apache.http.headers - >> Host: localhost:8080
+11:06:04.824 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+11:06:04.824 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_66)
+11:06:04.824 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+11:06:05.187 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+11:06:05.191 [main] DEBUG org.apache.http.wire -  << "Server: Apache-Coyote/1.1[\r][\n]"
+11:06:05.191 [main] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+11:06:05.191 [main] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+11:06:05.192 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+11:06:05.192 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+11:06:05.192 [main] DEBUG org.apache.http.wire -  << "Date: Fri, 27 Nov 2015 16:06:05 GMT[\r][\n]"
+11:06:05.192 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+11:06:05.193 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+11:06:05.193 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+11:06:05.194 [main] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+11:06:05.194 [main] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+11:06:05.194 [main] DEBUG org.apache.http.headers - << Expires: -1
+11:06:05.194 [main] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+11:06:05.194 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+11:06:05.194 [main] DEBUG org.apache.http.headers - << Date: Fri, 27 Nov 2015 16:06:05 GMT
+11:06:05.222 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+11:06:05.380 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json;charset=UTF-8
+11:06:05.381 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+11:06:05.610 [main] DEBUG org.apache.http.wire -  << "2ae[\r][\n]"
+11:06:05.611 [main] DEBUG org.apache.http.wire -  << "[{"id":1,"category":{"id":1,"name":"Category 1"},"name":"Name 1","photoUrls":["Url 1","Url 2"],"tags":[{"id":1,"name":"Tag 1"},{"id":2,"name":"Tag 2"}],"status":"available"},{"id":2,"category":{"id":1,"name":"Category 1"},"name":"Name 2","photoUrls":["Url 3","Url 4"],"tags":[{"id":2,"name":"Tag 2"},{"id":3,"name":"Tag 3"}],"status":"available"},{"id":3,"category":{"id":2,"name":"Category 2"},"name":"Name 3","photoUrls":["Url 5","Url 6"],"tags":[{"id":1,"name":"Tag 1"},{"id":3,"name":"Tag 3"}],"status":"pending"},{"id":4,"category":{"id":2,"name":"Category 2"},"name":"Name 4","photoUrls":["Url 7","Url 8"],"tags":[{"id":3,"name":"Tag 3"},{"id":4,"name":"Tag 4"}],"status":"sold"}]"
+11:06:05.613 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+11:06:05.613 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+11:06:05.614 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+11:06:05.614 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3f9342d4
+11:06:05.615 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+11:06:05.684 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+11:06:05.684 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+11:06:05.696 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+11:06:05.696 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+11:06:05.696 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+11:06:05.696 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+11:06:05.696 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+11:06:05.697 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /pet/4 HTTP/1.1
+11:06:05.698 [main] DEBUG org.apache.http.wire -  >> "GET /pet/4 HTTP/1.1[\r][\n]"
+11:06:05.698 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+11:06:05.698 [main] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+11:06:05.698 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+11:06:05.699 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_66)[\r][\n]"
+11:06:05.701 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:06:05.701 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+11:06:05.701 [main] DEBUG org.apache.http.headers - >> GET /pet/4 HTTP/1.1
+11:06:05.702 [main] DEBUG org.apache.http.headers - >> Accept: */*
+11:06:05.702 [main] DEBUG org.apache.http.headers - >> Host: localhost:8080
+11:06:05.702 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+11:06:05.702 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.1 (Java/1.8.0_66)
+11:06:05.702 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+11:06:05.724 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "Server: Apache-Coyote/1.1[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "Cache-Control: no-cache[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "Expires: -1[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "Date: Fri, 27 Nov 2015 16:06:05 GMT[\r][\n]"
+11:06:05.725 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+11:06:05.725 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+11:06:05.726 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+11:06:05.726 [main] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+11:06:05.726 [main] DEBUG org.apache.http.headers - << Cache-Control: no-cache
+11:06:05.726 [main] DEBUG org.apache.http.headers - << Expires: -1
+11:06:05.726 [main] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+11:06:05.726 [main] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+11:06:05.726 [main] DEBUG org.apache.http.headers - << Date: Fri, 27 Nov 2015 16:06:05 GMT
+11:06:05.726 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+11:06:05.727 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json;charset=UTF-8
+11:06:05.727 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+11:06:05.739 [main] DEBUG org.apache.http.wire -  << "a7[\r][\n]"
+11:06:05.739 [main] DEBUG org.apache.http.wire -  << "{"id":4,"category":{"id":2,"name":"Category 2"},"name":"Name 4","photoUrls":["Url 7","Url 8"],"tags":[{"id":3,"name":"Tag 3"},{"id":4,"name":"Tag 4"}],"status":"sold"}"
+11:06:05.739 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+11:06:05.739 [main] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+11:06:05.740 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+11:06:05.740 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7749bf93
+11:06:05.740 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.37 sec - in com.petstore.controller.PetControllerTests
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.782 s
+[INFO] Finished at: 2015-11-27T11:06:05-05:00
+[INFO] Final Memory: 18M/169M
+[INFO] ------------------------------------------------------------------------

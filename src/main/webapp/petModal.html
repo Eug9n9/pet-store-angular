@@ -1,0 +1,68 @@
+    <form class="form-horizontal" role="form" name="petForm">
+      <div ng-cloak class="modal-header">
+        <button type="button" class="close" ng-click="cancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">{{pet.title}}</h4>
+      </div>
+      <div ng-cloak class="modal-body">
+        <div class="row text-center pad-bottom" ng-show="error != null">
+          <div class="col-xs-12 text-red">
+            {{error}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="row">
+              <label class="col-xs-4 pad-top-3 text-right" for="name">Name:</label>
+              <div class="col-xs-8">
+                <input type="text" ng-model="pet.name" required maxlength="40" class="form-control input-xs" ng-class="{highlight : (error != null)}" id="name">
+              </div>
+            </div>
+
+            <div class="row pad-top-5">
+              <label class="col-xs-4 pad-top-3 text-right" for="category">Category:</label>
+              <div class="col-xs-8">
+                <select ng-model="pet.category" required ng-options="c.id as c.name for c in categories" class="form-control input-xs" ng-class="{highlight : (error != null)}" id="category">
+                </select>
+              </div>
+            </div>
+
+            <div class="row pad-top-5">
+              <label class="col-xs-4 pad-top-3 text-right" for="photoUrls0">Photo Url 1:</label>
+              <div class="col-xs-8">
+                <input type="text" ng-model="pet.photoUrls0" required maxlength="50" class="form-control input-xs" ng-class="{highlight : (error != null)}" id="photoUrls0">
+              </div>
+            </div>
+
+            <div class="row pad-top-5">
+              <label class="col-xs-4 pad-top-3 text-right" for="photoUrls1">Photo Url 2:</label>
+              <div class="col-xs-8">
+                <input type="text" ng-model="pet.photoUrls1" required maxlength="50" class="form-control input-xs" ng-class="{highlight : (error != null)}" id="photoUrls1">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="row">
+              <label class="col-xs-4 pad-top-3 text-right" for="status">Status:</label>
+              <div class="col-xs-8">
+                <select ng-model="pet.status" required ng-options="s as s for s in statuses" class="form-control input-xs" ng-class="{highlight : (error != null)}" id="status">
+                </select>
+              </div>
+            </div>
+
+            <div class="row pad-top-5">
+              <label class="col-xs-4 pad-top-3 text-right" for="tags">Tags:</label>
+              <div class="col-xs-8 pad-top-3">
+                <select multiple ng-model="pet.tags" required ng-options="t.id as t.name for t in tags" class="form-control input-xs" ng-class="{highlight : (error != null)}" id="tags">
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-cloak class="modal-footer">
+        <button type="button" class="btn btn-primary btn-xs" ng-click="ok()" ng-disabled="pet.id != -1"><span class="glyphicon glyphicon-ok"></span> &nbsp;Save</button>
+        <button type="button" class="btn btn-default btn-xs" ng-click="cancel()">Cancel</button>
+      </div>
+    </form>
